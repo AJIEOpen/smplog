@@ -21,7 +21,7 @@ namespace core
 
 		}
 
-		/*Éú³É×îÖÕÈÕÖ¾*/
+		/*ç”Ÿæˆæœ€ç»ˆæ—¥å¿—*/
 		virtual void GenInfo(std::string& info)
 		{
 			info.clear();
@@ -32,55 +32,55 @@ namespace core
 			info += std::string("\n\n");
 		}
 
-		/*ÈÕÖ¾±êÌâ*/
+		/*æ—¥å¿—æ ‡é¢˜*/
 		virtual void Title(std::string& title)
 		{
 			title = "";
 		}
 
-		/*ÈÕÖ¾ĞÅÏ¢»ã×Ü¡¢×Ü½á*/
+		/*æ—¥å¿—ä¿¡æ¯æ±‡æ€»ã€æ€»ç»“*/
 		virtual void Summary(std::string& summary)
 		{
 			summary = "";
 		}
 
-		/*ÈÕÖ¾¸ñÊ½*/
+		/*æ—¥å¿—æ ¼å¼*/
 		virtual void ContentFormat(std::string& cfmt)
 		{
 			cfmt = "";
 		}
 
-		/*Ìí¼ÓÈÕÖ¾ĞÅÏ¢*/
+		/*æ·»åŠ æ—¥å¿—ä¿¡æ¯*/
 		virtual void AddLog(const std::string& strInfo)
 		{
 			m_vecLogInfo.push_back(strInfo);
 		}
 
-		/*ÖØÖÃ*/
+		/*é‡ç½®*/
 		virtual void Reset();
 
-		/*»ñÈ¡ÈÕÖ¾id*/
-		virtual int GetID()				{ return m_id; }
+		/*è·å–æ—¥å¿—id*/
+		virtual int GetID()			{ return m_id; }
 
-		/*»ñÈ¡ÈÕÖ¾Ãû*/
-		virtual std::string GetName()	{ return m_name; }
+		/*è·å–æ—¥å¿—å*/
+		virtual std::string GetName()		{ return m_name; }
 
-		/*»ñÈ¡ÓÅÏÈ¼¶*/
+		/*è·å–ä¼˜å…ˆçº§*/
 		virtual int GetPriority()		{ return m_priority; }
 
-		/*ÉèÖÃÈÕÖ¾id*/
+		/*è®¾ç½®æ—¥å¿—id*/
 		virtual void SetID(int id)		{ m_id = id; }
 
-		/*ÉèÖÃÈÕÖ¾Ãû*/
+		/*è®¾ç½®æ—¥å¿—å*/
 		virtual void SetName(const std::string& name)	{ m_name = name; }
 
-		/*ÉèÖÃÓÅÏÈ¼¶*/
-		virtual void SetPriority(int priority)			{ m_priority = priority; }
+		/*è®¾ç½®ä¼˜å…ˆçº§*/
+		virtual void SetPriority(int priority)		{ m_priority = priority; }
 
 	private:
-		int							m_id;
-		int							m_priority;
-		std::string					m_name;
+		int				m_id;
+		int				m_priority;
+		std::string			m_name;
 		std::vector<std::string>	m_vecLogInfo;
 	};
 }
