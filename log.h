@@ -37,13 +37,13 @@ namespace core
 
 		void Reset();
 
-		// ½«ËùÓĞ½ÚµãµÄÈÕÖ¾Í³Ò»Ğ´ÈëÒ»¸öÎÄ¼ş
+		// å°†æ‰€æœ‰èŠ‚ç‚¹çš„æ—¥å¿—ç»Ÿä¸€å†™å…¥ä¸€ä¸ªæ–‡ä»¶
 		void Write();
 
-		// ×¢²áÒ»¸öÈÕÖ¾½Úµã
+		// æ³¨å†Œä¸€ä¸ªæ—¥å¿—èŠ‚ç‚¹
 		void Register(iLogNode* node);
 
-		// Ìí¼Ó½ÚµãÈÕÖ¾
+		// æ·»åŠ èŠ‚ç‚¹æ—¥å¿—
 		void AddNodeLog(int id, const std::string& strLog);
 
 		void SetRoomId(DWORD id)	{ m_roomId = id; }
@@ -53,13 +53,13 @@ namespace core
 		void Open(std::ofstream& file);
 
 	private:
-		std::string					m_path;				// µ±Ç°Ä¿Â¼
-		std::string					m_gameName;			// ÓÎÏ·Ãû
-		DWORD						m_roomId;			// µ±Ç°·¿¼äID
-		WORD						m_deskId;			// µ±Ç°×À×ÓID
-		int							m_maxId;			// µ±Ç°×î´óÈÕÖ¾½ÚµãID
-		std::map<int, iLogNode*>	m_mapLogNode;		// ÈÕÖ¾½Úµã¼¯ºÏ
-		bool						m_canWrite;			// ÊÇ·ñÄÜĞ´ÈëÈÕÖ¾
+		std::string					m_path;				// å½“å‰ç›®å½•
+		std::string					m_gameName;			// æ¸¸æˆå
+		DWORD						m_roomId;			// å½“å‰æˆ¿é—´ID
+		WORD						m_deskId;			// å½“å‰æ¡Œå­ID
+		int						m_maxId;			// å½“å‰æœ€å¤§æ—¥å¿—èŠ‚ç‚¹ID
+		std::map<int, iLogNode*>			m_mapLogNode;			// æ—¥å¿—èŠ‚ç‚¹é›†åˆ
+		bool						m_canWrite;			// æ˜¯å¦èƒ½å†™å…¥æ—¥å¿—
 	};
 }
 
